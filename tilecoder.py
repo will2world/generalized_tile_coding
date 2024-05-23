@@ -55,23 +55,3 @@ class TileCoder(nn.Module):
             coord[dim] = ind // divisor
             ind = ind % divisor
         return coord
-
-if __name__ == "__main__":
-    import torch.nn.functional as F
-
-    tiles_per_dim = [10, 10, 10, 10]  
-    value_limits = [[0, 1], [0, 1], [0, 1], [0, 1]]  
-    tilings = 10
-
-    tile_coder = TileCoder(tiles_per_dim, value_limits, tilings)
-
-    inputs = torch.tensor([[0.5, 0.5, 0.5, 0.1], [0.1, 0.9, 0.2, 0.1], [0.45, 0.354, 0.77, 0.1]], dtype=torch.float32)
-
-    encoded_inputs = tile_coder(inputs)
-    print(encoded_inputs)
-
-    decoded_inputs = tile_coder.inverse(encoded_inputs)
-    print(decoded_inputs)
-
-    cos_similarity = F.cosine_similarity(inputs, decoded_inputs)
-    print(cos_similarity.mean())
