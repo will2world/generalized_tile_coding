@@ -1,7 +1,7 @@
 # Generalized tile coding module
 
 ## Overview
-This module is reproduced from [https://github.com/MeepMoop/tilecoding] with PyTorch. The TileCoder class encodes multi-dimensional continuous input data into discrete tile indices, which can be used for reinforcement learning applications. It also supports decoding these indices back into approximate original values. This guide will show you how to initialize, use, and understand the key methods in the TileCoder class.
+This module is reproduced of [https://github.com/MeepMoop/tilecoding] with PyTorch. The TileCoder class encodes multi-dimensional continuous input data into discrete tile indices, which can be used for reinforcement learning applications. It also supports decoding these indices back into approximate original values. This guide will show you how to initialize, use, and understand the key methods in the TileCoder class.
 
 ## Initialization
 To initialize the TileCoder class, you need to specify the number of tiles per dimension, the value limits for each dimension, and the number of tilings.
