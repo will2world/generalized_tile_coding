@@ -1,6 +1,7 @@
-# User Guide: Generalized tile coding module
+# Generalized tile coding module
 
 ## Overview
+This module is inspired by [https://github.com/MeepMoop/tilecoding] and reproduced with torch.
 The TileCoder class encodes multi-dimensional continuous input data into discrete tile indices, which can be used for reinforcement learning applications. It also supports decoding these indices back into approximate original values. This guide will show you how to initialize, use, and understand the key methods in the TileCoder class.
 
 ## Initialization
